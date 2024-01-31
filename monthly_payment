@@ -1,0 +1,11 @@
+print("To utilize this calculator you will need to provide the amount of the initial loan, the annual percentage rate, and the number of years for the loan.")
+
+principal_amount = float(input("Please input the amount of the loan:"))
+annual_percentage = float(input("Please input the annual percentage rate: "))
+number_of_years = int(input("Please input the number of years for the loan:"))
+
+interest_rate_monthly = annual_percentage / 1200
+number_of_months = number_of_years * 12
+monthly_payment = principal_amount * interest_rate_monthly / (1-(1 + interest_rate_monthly) ** (-number_of_months))
+
+print("The monthly payment on this loan is: $%.2f " % monthly_payment)
